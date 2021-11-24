@@ -1,0 +1,13 @@
+
+.lists{
+  text-align:center;
+  margin:auto 0;
+}
+
+.lists li{
+    text-decoration: none;
+}
+
+li{
+  list-style-type:none;
+}
