@@ -12,8 +12,8 @@ export function Lists(){
     const getUsers=async()=>{
 
         const res=await axios.get(`https://randomuser.me/api/?results=10`);
-        const data=await res.json();
-        setNewUser(data.results);
+        console.log(res);
+        setNewUser(res.data.results);
     }
     console.log(eachUser);
     return (
@@ -28,7 +28,7 @@ export function Lists(){
                                 <li style={{textDecoration:"none"}} key={user.login.uuid}>
                                     <Link to={{
                                         pathname:`/details/${user.login.uuid}`,
-                                        state:"Aditi",
+                                        state:{user:user},
                                     }}>
                                         {user.name.first} {user.name.last}
                                     </Link>
